@@ -4,9 +4,9 @@ const Login = (props) => {
   return (
     <Container>
       <Content>
-        {/* <CTA>
-          <CTALogoOne src="/images/01-splash/01-cta-logo.svg" alt="" />
-        </CTA> */}
+        <CTA>
+          <CTALogoOne src="/images/01-splash/01-cta-logo-one.png" alt="" />
+        </CTA>
         <SplashBackground />
       </Content>
     </Container>
@@ -53,8 +53,32 @@ const SplashBackground = styled.div`
   left: 0;
 `;
 
-// const CTA = styled.div``;
+const CTA = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
 
-// const CTALogoOne = styled.img``;
+  width: 100%;
+  max-width: 650px;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+
+  transition-timing-function: ease-out;
+  transition: opacity 0.2s;
+
+  border: 1px solid blue;
+`;
+
+const CTALogoOne = styled.img`
+  margin-bottom: 12px;
+  max-width: 600px;
+  min-height: 1px;
+  display: block;
+  width: 100%;
+`;
 
 export default Login;

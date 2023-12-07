@@ -41,7 +41,7 @@ const Content = styled.div`
   padding: 80px 40px;
   height: 100%;
 
-  border: 1px solid red;
+  // border: 1px solid red;
 `;
 
 const SplashBackground = styled.div`

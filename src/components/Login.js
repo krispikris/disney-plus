@@ -40,8 +40,6 @@ const Content = styled.div`
   flex-direction: column;
   padding: 80px 40px;
   height: 100%;
-
-  border: 1px solid red;
 `;
 
 const SplashBackground = styled.div`
@@ -67,7 +65,7 @@ const CTA = styled.div`
   width: 100%;
   max-width: 650px;
 
-  border: 1px solid blue;
+  // border: 1px solid blue;
 `;
 
 // const CTA = styled.div`
@@ -125,7 +123,7 @@ const Description = styled.p`
   line-height: 1.5;
 
   margin: 0 0 24px;
-  border: 1px solid pink;
+  // border: 1px solid pink;
 `;
 
 const CTALogoTwo = styled.img`

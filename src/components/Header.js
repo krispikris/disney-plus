@@ -6,6 +6,7 @@ const Header = (props) => {
       <Logo>
         <img src="../images/00-icons/01-disney-logo.png" alt="" />
       </Logo>
+      <Menu>MENU</Menu>
     </Nav>
   );
 };
@@ -44,6 +45,24 @@ const Logo = styled.a`
   }
 
   border: 1px solid yellow;
+`;
+
+const Menu = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  flex-flow: row nowrap;
+  align-items: center;
+  position: relative;
+
+  height: 100%;
+  margin-left: 24px;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  border: 1px solid green;
 `;
 
 export default Header;

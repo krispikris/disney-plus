@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { auth, provider } from '../firebase';
-
 const Header = (props) => {
   const handleAuth = () => {
     auth

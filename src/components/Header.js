@@ -12,27 +12,28 @@ const Header = (props) => {
           <span>HOME</span>
         </a>
 
-        <a>
+        <a href="/search">
           <img src="../images/00-icons/03-nav-search-icon.svg" alt="" />
           <span>SEARCH</span>
         </a>
-        <a>
+        <a href="/watchlist">
           <img src="../images/00-icons/04-nav-watchlist-icon.svg" alt="" />
           <span>WATCHLIST</span>
         </a>
-        <a>
+        <a href="/originals">
           <img src="../images/00-icons/05-nav-originals-icon.svg" alt="" />
           <span>ORIGINALS</span>
         </a>
-        <a>
+        <a href="/movies">
           <img src="../images/00-icons/06-nav-movies-icon.svg" alt="" />
           <span>MOVIES</span>
         </a>
-        <a>
+        <a href="/series">
           <img src="../images/00-icons/07-nav-series-icon.svg" alt="" />
           <span>SERIES</span>
         </a>
       </NavMenu>
+      <Login>Login</Login>
     </Nav>
   );
 };
@@ -136,6 +137,24 @@ const NavMenu = styled.div`
         opacity: 1 !important;
       }
     }
+  }
+`;
+
+const Login = styled.a`
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    background-color: #f9f9f9;
+    color: #000;
+    border-color: transparent;
   }
 `;
 

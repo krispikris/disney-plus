@@ -6,7 +6,33 @@ const Header = (props) => {
       <Logo>
         <img src="../images/00-icons/01-disney-logo.png" alt="" />
       </Logo>
-      <Menu>MENU</Menu>
+      <NavMenu>
+        <a href="/home">
+          <img src="../images/00-icons/02-nav-home-icon.svg" alt="" />
+          <span>HOME</span>
+        </a>
+
+        <a>
+          <img src="../images/00-icons/03-nav-search-icon.svg" alt="" />
+          <span>SEARCH</span>
+        </a>
+        <a>
+          <img src="../images/00-icons/04-nav-watchlist-icon.svg" alt="" />
+          <span>WATCHLIST</span>
+        </a>
+        <a>
+          <img src="../images/00-icons/05-nav-originals-icon.svg" alt="" />
+          <span>ORIGINALS</span>
+        </a>
+        <a>
+          <img src="../images/00-icons/06-nav-movies-icon.svg" alt="" />
+          <span>MOVIES</span>
+        </a>
+        <a>
+          <img src="../images/00-icons/07-nav-series-icon.svg" alt="" />
+          <span>SERIES</span>
+        </a>
+      </NavMenu>
     </Nav>
   );
 };
@@ -47,22 +73,70 @@ const Logo = styled.a`
   border: 1px solid yellow;
 `;
 
-const Menu = styled.div`
+const NavMenu = styled.div`
+  position: relative;
   display: flex;
   justify-content: flex-end;
   flex-flow: row nowrap;
   align-items: center;
-  position: relative;
 
   height: 100%;
-  margin-left: 24px;
+  margin: 0px;
   margin-right: auto;
+  margin-left: 24px;
+  padding: 0px;
 
-  @media (max-width: 768px) {
-    display: none;
+  a {
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    img {
+      height: 20px;
+      width: 20px;
+      min-width: 20px;
+
+      z-index: auto;
+    }
+
+    span {
+      position: relative;
+      white-space: nowrap;
+      font-size: 13px;
+      letter-spacing: 1.42px;
+      line-height: 1.08;
+      padding: 2px 0px;
+      color: rgb(249, 249, 249);
+
+      &:before {
+        position: absolute;
+        content: '';
+        background-color: rgb(249, 249, 249);
+        opacity: 0;
+        border-radius: 0px 0px 4px 4px;
+
+        height: 2px;
+        right: 0px;
+        bottom: -6px;
+        left: 0px;
+
+        transform-origin: left center;
+        transform: scaleX(0);
+        transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
+        visibility: hidden;
+        width: auto;
+      }
+    }
+
+    &:hover {
+      span:before {
+        transform: scaleX(1);
+        visibility: visible;
+        opacity: 1 !important;
+      }
+    }
   }
-
-  border: 1px solid green;
 `;
 
 export default Header;

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { auth, provider } from '../firebase';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import {
   selectUserName,
   selectUserPhoto,
@@ -11,11 +11,11 @@ import {
 
 const Header = (props) => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
 
-  const handleAuth = () => {
+  const handleLogin = () => {
     auth
       // .signInWithRedirect(provider)
       .signInWithPopup(provider)
@@ -43,7 +43,7 @@ const Header = (props) => {
         <img src="../images/00-icons/01-disney-logo.png" alt="" />
       </Logo>
       {!userName ? (
-        <Login onClick={handleAuth}>Login</Login>
+        <Login onClick={handleLogin}>Login</Login>
       ) : (
         <>
           <NavMenu>
@@ -80,7 +80,7 @@ const Header = (props) => {
           <UserImg src={userPhoto} alt={userName} />
         </>
       )}
-      ;{/* <Login onClick={handleAuth}>Login</Login> */}
+      ;{/* <Login onClick={handleSubit}>Login</Login> */}
     </Nav>
   );
 };

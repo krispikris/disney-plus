@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { auth, provider } from '../firebase';
-
+import { signInWithPopup } from 'firebase/auth';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import {
   selectUserName,
   selectUserPhoto,
@@ -11,14 +11,12 @@ import {
 
 const Header = (props) => {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
 
   const handleLogin = () => {
-    auth
-      // .signInWithRedirect(provider)
-      .signInWithPopup(provider)
+    signInWithPopup(auth, provider)
       .then((result) => {
         setUser(result.user);
       })
@@ -80,7 +78,7 @@ const Header = (props) => {
           <UserImg src={userPhoto} alt={userName} />
         </>
       )}
-      ;{/* <Login onClick={handleSubit}>Login</Login> */}
+      {/* <Login onClick={handleSubit}>Login</Login> */}
     </Nav>
   );
 };

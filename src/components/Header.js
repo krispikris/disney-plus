@@ -78,7 +78,6 @@ const Header = (props) => {
           <UserImg src={userPhoto} alt={userName} />
         </>
       )}
-      {/* <Login onClick={handleSubit}>Login</Login> */}
     </Nav>
   );
 };

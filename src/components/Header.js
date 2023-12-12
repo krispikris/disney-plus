@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { auth, provider } from '../firebase';
-import { signInWithPopup } from 'firebase/auth';
+import { onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+import { useNavigate } from 'react-router';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { useNavigate } from 'react-router';
+import { auth, provider } from '../firebase';
 import {
   selectUserName,
   selectUserPhoto,
@@ -11,9 +12,21 @@ import {
 
 const Header = (props) => {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
+
+  // react hook
+  // making sure that, when user is logged in, the home screen is shown
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      // if (!user) {
+      if (user) {
+        setUser(user);
+        navigate('/home');
+      }
+    });
+  }, [userName]);
 
   const handleLogin = () => {
     signInWithPopup(auth, provider)
@@ -45,10 +58,9 @@ const Header = (props) => {
       ) : (
         <>
           <NavMenu>
-            <a href="/home">
+            {/* <a href="/home">
               <img src="../images/00-icons/02-nav-home-icon.svg" alt="HOME" />
-            </a>
-
+            </a> */}
             <a href="/home">
               <img src="../images/00-icons/02-nav-home-icon.svg" alt="" />
               <span>HOME</span>
@@ -75,7 +87,13 @@ const Header = (props) => {
               <span>SERIES</span>
             </a>
           </NavMenu>
-          <UserImg src={userPhoto} alt={userName} />
+
+          <SignOut>
+            <UserImg src={userPhoto} alt={userName} />
+            <Dropdown>
+              <span onClick={handleLogin}>Sign Out</span>
+            </Dropdown>
+          </SignOut>
         </>
       )}
     </Nav>
@@ -204,6 +222,52 @@ const Login = styled.a`
 
 const UserImg = styled.img`
   height: 100%;
+`;
+
+const Dropdown = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding: 10px;
+
+  top: 48px;
+  right: 0px;
+
+  background-color: rgba(19, 19, 19, 0.8);
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  border-radius: 4px;
+  opacity: 0;
+`;
+
+const SignOut = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 48px;
+  width: 48px;
+
+  cursor: pointer;
+
+  ${UserImg} {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
+  }
+
+  &:hover {
+    ${Dropdown} {
+      opacity: 1;
+      transition-duration: 1s;
+    }
+  }
 `;
 
 export default Header;

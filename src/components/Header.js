@@ -1,13 +1,14 @@
 import styled from 'styled-components';
-import { onAuthStateChanged, signInWithPopup } from 'firebase/auth';
+import { onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { auth, provider } from '../firebase';
 import {
+  setUserLoginDetails,
+  setSignOutState,
   selectUserName,
   selectUserPhoto,
-  setUserLoginDetails,
 } from '../features/users/userSlice';
 
 const Header = (props) => {
@@ -29,13 +30,20 @@ const Header = (props) => {
   }, [userName]);
 
   const handleLogin = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        alert(error.message);
+    if (!userName) {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          setUser(result.user);
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    } else if (userName) {
+      signOut(auth, provider).then(() => {
+        dispatch(setSignOutState());
+        navigate('/');
       });
+    }
   };
 
   const setUser = (user) => {
@@ -234,7 +242,7 @@ const Dropdown = styled.div`
   letter-spacing: 3px;
   padding: 10px;
 
-  top: 48px;
+  top: 56px;
   right: 0px;
 
   background-color: rgba(19, 19, 19, 0.8);

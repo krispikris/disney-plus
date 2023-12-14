@@ -14,8 +14,8 @@ import {
 const Header = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const userName = useSelector(selectUserName);
-  const userPhoto = useSelector(selectUserPhoto);
+  // const userName = useSelector(selectUserName);
+  // const userPhoto = useSelector(selectUserPhoto);
 
   // react hook
   // making sure that, when user is logged in, the home screen is shown

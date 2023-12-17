@@ -25,11 +25,11 @@ const ImageSlider = (props) => {
         </a>
       </Wrap>
 
-      {/* <Wrap>
+      <Wrap>
         <a>
           <img src="/images/02-home/01-sliders/02-slider-onward.jpg" alt="" />
         </a>
-      </Wrap> */}
+      </Wrap>
 
       <Wrap>
         <a>

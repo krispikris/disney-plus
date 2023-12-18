@@ -19,7 +19,7 @@ const ImageSlider = (props) => {
       <Wrap>
         <a>
           <img
-            src="/images/02-home/01-sliders/01-slider-wanda-vision.jpg"
+            // src="/images/02-home/01-sliders/01-slider-wanda-vision.jpg"
             alt=""
           />
         </a>

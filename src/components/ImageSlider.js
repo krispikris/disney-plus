@@ -71,7 +71,6 @@ const Carousel = styled(Slider)`
   ul li button {
     &:before {
       font-size: 10px;
-
       color: rgb(150, 158, 171);
     }
   }
@@ -97,19 +96,18 @@ const Carousel = styled(Slider)`
 // Styled Wrap Component: This styles the Wrap component
 const Wrap = styled.div`
   position: relative;
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
 
   // each slide is a link (a tag)
   a {
-    position: relative;
     display: block;
-    cursor: pointer;
-
+    position: relative;
     padding: 4px;
     border-radius: 4px;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
       rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    cursor: pointer;
   }
 
   // image in each slide

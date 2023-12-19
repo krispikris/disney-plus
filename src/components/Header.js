@@ -110,48 +110,45 @@ const Header = (props) => {
 
 const Nav = styled.nav`
   position: fixed;
+  height: 70px;
+  z-index: 3;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  padding: 0 36px;
+  letter-spacing: 16px;
+  background-color: #090b13;
+
   top: 0;
   right: 0;
   left: 0;
-  height: 70px;
-  padding: 0 36px;
-
-  letter-spacing: 16px;
-  z-index: 3;
-
-  background-color: #090b13;
-  // border: 1px solid purple;
 `;
 
 const Logo = styled.a`
   display: inline-block;
-  font-size: 0;
-
   width: 80px;
   max-height: 70px;
-  padding: 0;
   margin-top: 4px;
+  padding: 0;
+  font-size: 0;
 
   img {
     display: block;
     width: 100%;
   }
-
-  // border: 1px solid yellow;
 `;
 
 const NavMenu = styled.div`
   position: relative;
+  height: 100%;
+
   display: flex;
   justify-content: flex-end;
   flex-flow: row nowrap;
   align-items: center;
 
-  height: 100%;
   margin: 0px;
   margin-right: auto;
   margin-left: 24px;
@@ -160,71 +157,73 @@ const NavMenu = styled.div`
   a {
     display: flex;
     align-items: center;
-
     padding: 0 12px;
 
     img {
       height: 20px;
       width: 20px;
       min-width: 20px;
-
       z-index: auto;
     }
 
     span {
       position: relative;
-      white-space: nowrap;
-      font-size: 13px;
-      letter-spacing: 1.42px;
-      line-height: 1.08;
       padding: 2px 0px;
+
+      font-size: 13px;
       color: rgb(249, 249, 249);
+      line-height: 1.08;
+      letter-spacing: 1.42px;
+      white-space: nowrap;
 
       &:before {
         position: absolute;
-        content: '';
-        background-color: rgb(249, 249, 249);
-        opacity: 0;
-        border-radius: 0px 0px 4px 4px;
-
+        width: auto;
         height: 2px;
-        right: 0px;
-        bottom: -6px;
-        left: 0px;
+
+        border-radius: 0px 0px 4px 4px;
+        background-color: rgb(249, 249, 249);
+
+        opacity: 0;
+        visibility: hidden;
 
         transform-origin: left center;
         transform: scaleX(0);
         transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
-        visibility: hidden;
-        width: auto;
+
+        right: 0px;
+        bottom: -6px;
+        left: 0px;
+
+        content: '';
       }
     }
 
     &:hover {
       span:before {
-        transform: scaleX(1);
-        visibility: visible;
         opacity: 1 !important;
+        visibility: visible;
+        transform: scaleX(1);
       }
     }
   }
 `;
 
 const Login = styled.a`
-  background-color: rgba(0, 0, 0, 0.6);
   padding: 8px 16px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-
   border: 1px solid #f9f9f9;
   border-radius: 4px;
 
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  background-color: rgba(0, 0, 0, 0.6);
   transition: all 0.2s ease 0s;
 
   &:hover {
-    background-color: #f9f9f9;
     color: #000;
     border-color: transparent;
+    background-color: #f9f9f9;
   }
 `;
 
@@ -234,39 +233,40 @@ const UserImg = styled.img`
 
 const Dropdown = styled.div`
   position: absolute;
+  width: 120px;
+
   display: flex;
   justify-content: center;
-  width: 120px;
 
   font-size: 14px;
   letter-spacing: 3px;
-  padding: 10px;
 
-  top: 56px;
-  right: 0px;
+  padding: 10px;
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  border-radius: 4px;
 
   background-color: rgba(19, 19, 19, 0.8);
   box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
-  border: 1px solid rgba(151, 151, 151, 0.34);
-  border-radius: 4px;
   opacity: 0;
+
+  top: 56px;
+  right: 0px;
 `;
 
 const SignOut = styled.div`
   position: relative;
+  width: 48px;
+  height: 48px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-
-  height: 48px;
-  width: 48px;
 
   cursor: pointer;
 
   ${UserImg} {
     width: 100%;
     height: 100%;
-
     border-radius: 50%;
   }
 

@@ -4,16 +4,19 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+// ImageSlider Component: This is the main image slider component.
 const ImageSlider = (props) => {
+  // slider settings
   let settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
+    dots: true, // show dot indicators at the bottom of the slider
+    infinite: true, // infinite looping of images
+    speed: 500, // transition speed in milliseconds
     slidesToShow: 1, // how many slides to show at once
     slidesToScroll: 1, // how many slides to scroll at once
-    autoplay: true,
+    autoplay: true, // enable automatic sliding
   };
 
+  // return the Carousel component with the defined settings and images
   return (
     <Carousel {...settings}>
       <Wrap>
@@ -46,9 +49,11 @@ const ImageSlider = (props) => {
   );
 };
 
+// Styled Carousel Component: This styles the Slider component
 const Carousel = styled(Slider)`
   margin-top: 20px;
 
+  // slider buttons (left & right)
   & > button {
     width: 5vw;
     height: 100%;
@@ -62,6 +67,7 @@ const Carousel = styled(Slider)`
     }
   }
 
+  // slider navigation dots
   ul li button {
     &:before {
       font-size: 10px;
@@ -88,11 +94,13 @@ const Carousel = styled(Slider)`
   }
 `;
 
+// Styled Wrap Component: This styles the Wrap component
 const Wrap = styled.div`
   position: relative;
   cursor: pointer;
   border-radius: 4px;
 
+  // each slide is a link (a tag)
   a {
     position: relative;
     display: block;
@@ -104,11 +112,13 @@ const Wrap = styled.div`
       rgb(0 0 0 / 73%) 0px 16px 10px -10px;
   }
 
+  // image in each slide
   img {
     width: 100%;
     height: 100%;
   }
 
+  // hover effect on each slide
   &:hover {
     padding: 0px;
     border: 4px solid rgba(249, 249, 249, 0.8);

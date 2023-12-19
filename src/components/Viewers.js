@@ -5,21 +5,43 @@ const Viewers = (props) => {
     <Container>
       <Wrap>
         <img src="/images/02-home/02-viewers/01-viewers-disney.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source src="/videos/00-home/01-disney.mp4" type="video/mp4" />
+        </video>
       </Wrap>
+
       <Wrap>
         <img src="/images/02-home/02-viewers/02-viewers-pixar.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source src="/videos/00-home/02-pixar.mp4" type="video/mp4" />
+        </video>
       </Wrap>
+
       <Wrap>
         <img src="/images/02-home/02-viewers/03-viewers-marvel.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source src="/videos/00-home/03-marvel.mp4" type="video/mp4" />
+        </video>
       </Wrap>
+
       <Wrap>
         <img src="/images/02-home/02-viewers/04-viewers-star-wars.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source src="/videos/00-home/04-star-wars.mp4" type="video/mp4" />
+        </video>
       </Wrap>
+
       <Wrap>
         <img
           src="/images/02-home/02-viewers/05-viewers-national-geographic.png"
           alt=""
         />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source
+            src="/videos/00-home/05-national-geographic.mp4"
+            type="video/mp4"
+          />
+        </video>
       </Wrap>
     </Container>
   );

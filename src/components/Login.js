@@ -21,10 +21,13 @@ const Login = (props) => {
 };
 
 const Container = styled.section`
-  overflow: hidden;
+  // layout
   display: flex;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
+
+  // box model
   height: 100vh;
 `;
 

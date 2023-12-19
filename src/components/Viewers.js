@@ -77,10 +77,32 @@ const Wrap = styled.div`
     display: block;
     width: 100%;
     height: 100%;
+    z-index: 1;
     inset: 0px;
     object-fit: cover;
     opacity: 1;
+
+    top: 0px;
     transition: opacity 500ms ease-in-out 0s;
+  }
+
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0;
+    top: 0px;
+  }
+
+  &:hover {
+    box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
+      rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+    transform: scale(1.05);
+
+    video {
+      opacity: 1;
+    }
   }
 `;
 

@@ -7,7 +7,7 @@ const Login = (props) => {
         <CTA>
           <CTALogoOne src="/images/01-splash/01-cta-logo-one.svg" alt="" />
           {/* <CTALogoOne src="/images/01-splash/01-cta-logo-one.png" alt="" /> */}
-          <SignUp>GET ALL THERE</SignUp>
+          {/* <SignUp>GET ALL THERE</SignUp> */}
           <Description>
             Get Premier Access to epic entertainment from Hulu, Disney+, and
             ESPN+ with a Disney Bundle.

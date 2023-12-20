@@ -12,10 +12,10 @@ const movieSlice = createSlice({
   initialState,
   reducers: {
     setMovies: (state, action) => {
-      state.recommend = action.payload.recommend;
-      state.new = action.payload.new;
-      state.original = action.payload.original;
-      state.trending = action.payload.trending;
+      //   state.recommend = action.payload.recommend;
+      //   state.new = action.payload.new;
+      //   state.original = action.payload.original;
+      //   state.trending = action.payload.trending;
     },
   },
 });

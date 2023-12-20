@@ -9,7 +9,7 @@ import {
   setSignOutState,
   selectUserName,
   selectUserPhoto,
-} from '../features/users/userSlice';
+} from '../features/user/userSlice';
 
 const Header = (props) => {
   const dispatch = useDispatch();

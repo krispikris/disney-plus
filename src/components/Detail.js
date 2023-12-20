@@ -30,7 +30,22 @@ const Detail = (props) => {
             <span>Play</span>
           </Player>
 
-          <Trailer></Trailer>
+          <Trailer>
+            <img
+              src="/images/00-icons/08-b-control-play-icon-white.png"
+              alt=""
+            />
+            <span>Trailer</span>
+          </Trailer>
+          <AddList>
+            <span />
+            <span />
+          </AddList>
+          <GroupWatch>
+            <div>
+              <img src="/images/00-icons/09-control-group-icon.png" alt="" />
+            </div>
+          </GroupWatch>
         </Controls>
       </ContentMeta>
     </Container>
@@ -136,7 +151,70 @@ const Player = styled.button`
   }
 `;
 
-const Trailer = styled.button``;
+const Trailer = styled(Player)`
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(249, 249, 249);
+  color: rgb(249, 249, 249);
+
+  &:hover {
+    color: rgb(0, 0, 0);
+
+    // img {
+    //   background-image: url('/images/00-icons/another-image.png');
+    // }
+  }
+`;
+
+const AddList = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+
+  span {
+    display: inline-block;
+    background-color: rgb(249, 249, 249);
+
+    &:first-child {
+      width: 16px;
+      height: 2px;
+      transform: translate(1px, 0px) rotate(0deg);
+    }
+
+    &:nth-child(2) {
+      height: 16px;
+      width: 2px;
+      transform: translateX(-8px) rotate(0deg);
+    }
+  }
+`;
+
+const GroupWatch = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+
+  div {
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+
+  img {
+    width: 100%;
+  }
+`;
 
 export default Detail;
 

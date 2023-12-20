@@ -97,33 +97,3 @@ const Container = styled.main`
 `;
 
 export default Home;
-
-/*
-          case 'recommend':
-            recommended = [...recommended, { id: doc.id, ...doc.data() }];
-            break;
-          case 'new':
-            newToDisney = [...newToDisney, { id: doc.id, ...doc.data() }];
-            break;
-          case 'original':
-            originals = [...originals, { id: doc.id, ...doc.data() }];
-            break;
-          case 'trending':
-            trending = [...trending, { id: doc.id, ...doc.data() }];
-            break;
-          
-                  switch (doc.data().type) {
-          case 'recommend':
-            recommended.push({ id: doc.id, ...doc.data() });
-            break;
-          case 'new':
-            newToDisney.push({ id: doc.id, ...doc.data() });
-            break;
-          case 'original':
-            originals.push({ id: doc.id, ...doc.data() });
-            break;
-          case 'trending':
-            trending.push({ id: doc.id, ...doc.data() });
-            break;
-        }
-            */

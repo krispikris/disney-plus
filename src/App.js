@@ -3,10 +3,12 @@ import Login from './components/Login';
 import Header from './components/Header';
 import Home from './components/Home';
 import Detail from './components/Detail';
+// import { AuthProvider } from './components/AuthContext';
 import './App.css';
 
 function App() {
   return (
+    // <AuthProvider>
     <div className="App">
       <Router>
         <Header />
@@ -17,6 +19,7 @@ function App() {
         </Routes>
       </Router>
     </div>
+    // </AuthProvider>
   );
 }
 

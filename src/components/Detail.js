@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-// import { useParams } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const Detail = (props) => {
-  //   const { id } = useParams();
+  //   const navigate = useNavigate();
 
   return (
     <Container>
@@ -12,6 +12,27 @@ const Detail = (props) => {
           alt=""
         />
       </Background>
+
+      <ImageTitle>
+        <img
+          src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5C647DF3FFBFA343CFEA84AC715148F25F9E86F398B408010CC403E7654FB908/scale?width=1440&aspectRatio=1.78"
+          alt=""
+        />
+      </ImageTitle>
+
+      <ContentMeta>
+        <Controls>
+          <Player>
+            <img
+              src="/images/00-icons/08-a-control-play-icon-black.png"
+              alt=""
+            />
+            <span>Play</span>
+          </Player>
+
+          <Trailer></Trailer>
+        </Controls>
+      </ContentMeta>
     </Container>
   );
 };
@@ -43,4 +64,84 @@ const Background = styled.div`
     }
 `;
 
+const ImageTitle = styled.div`
+  display: flex;
+  -webkit-box-pack: start;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  height: 30vw;
+  min-height: 160px;
+
+  margin: 0px auto;
+  padding-bottom: 24px;
+
+  img {
+    max-width: 600px;
+    min-width: 200px;
+    width: 35vw;
+  }
+`;
+
+const ContentMeta = styled.div`
+  max-width: 874px;
+`;
+
+const Controls = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  min-height: 56px;
+  margin: 24px 0px;
+`;
+
+const Player = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+
+  margin: 0px 24px 0px 0px;
+  padding: 0px 24px;
+  border: none;
+  border-radius: 4px;
+
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.8px;
+
+  background: rgb(249, 249, 249);
+  color: rgb(0, 0, 0);
+
+  cursor: pointer;
+
+  img {
+    width: 32px;
+  }
+
+  &:hover {
+    background: rgb(198, 198, 198);
+  }
+
+  @media (max-width: 768px) {
+    height: 48px;
+    margin: 0px 12px 0px 0px;
+    padding: 0px 12px;
+    font-size: 12px;
+
+    img {
+      width: 24px;
+    }
+  }
+`;
+
+const Trailer = styled.button``;
+
 export default Detail;
+
+//   useEffect(() => {
+//     if (!currentUser) {
+//       navigate('/home');
+//     }
+//   }, [currentUser, navigate]);

@@ -63,8 +63,8 @@ const Detail = (props) => {
             </div>
           </GroupWatch>
         </Controls>
-        <SubTitle>{detailData.SubTitle}</SubTitle>
-        <Description>{detailData.Description}</Description>
+        <SubTitle>{detailData.subTitle}</SubTitle>
+        <Description>{detailData.description}</Description>
       </ContentMeta>
     </Container>
   );

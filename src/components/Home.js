@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import db from '../firebase';
+import { collection, onSnapshot } from 'firebase/firestore';
 
 import { setMovies } from '../features/movie/movieSlice';
 import { selectUserName } from '../features/user/userSlice';
@@ -17,10 +18,12 @@ const Home = (props) => {
   const dispatch = useDispatch();
   const userName = useSelector(selectUserName);
 
-  let recommends = [];
+  let recommended = [];
   let newToDisney = [];
   let originals = [];
   let trending = [];
+
+  useEffect(() => {}, []);
 
   return (
     <Container>
@@ -58,3 +61,33 @@ const Container = styled.main`
 `;
 
 export default Home;
+
+/*
+          case 'recommend':
+            recommended = [...recommended, { id: doc.id, ...doc.data() }];
+            break;
+          case 'new':
+            newToDisney = [...newToDisney, { id: doc.id, ...doc.data() }];
+            break;
+          case 'original':
+            originals = [...originals, { id: doc.id, ...doc.data() }];
+            break;
+          case 'trending':
+            trending = [...trending, { id: doc.id, ...doc.data() }];
+            break;
+          
+                  switch (doc.data().type) {
+          case 'recommend':
+            recommended.push({ id: doc.id, ...doc.data() });
+            break;
+          case 'new':
+            newToDisney.push({ id: doc.id, ...doc.data() });
+            break;
+          case 'original':
+            originals.push({ id: doc.id, ...doc.data() });
+            break;
+          case 'trending':
+            trending.push({ id: doc.id, ...doc.data() });
+            break;
+        }
+            */

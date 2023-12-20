@@ -1,3 +1,10 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import db from '../firebase';
+
+import { setMovies } from '../features/movie/movieSlice';
+import { selectUserName } from '../features/user/userSlice';
+
 import styled from 'styled-components';
 import ImageSlider from './ImageSlider';
 import Viewers from './Viewers';
@@ -7,6 +14,14 @@ import Originals from './Originals';
 import Trending from './Trending';
 
 const Home = (props) => {
+  const dispatch = useDispatch();
+  const userName = useSelector(selectUserName);
+
+  let recommends = [];
+  let newToDisney = [];
+  let originals = [];
+  let trending = [];
+
   return (
     <Container>
       <ImageSlider />

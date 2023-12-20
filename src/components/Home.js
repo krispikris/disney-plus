@@ -1,3 +1,11 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import db from '../firebase';
+import { collection, onSnapshot } from 'firebase/firestore';
+
+import { setMovies } from '../features/movie/movieSlice';
+import { selectUserName } from '../features/user/userSlice';
+
 import styled from 'styled-components';
 import ImageSlider from './ImageSlider';
 import Viewers from './Viewers';
@@ -7,6 +15,52 @@ import Originals from './Originals';
 import Trending from './Trending';
 
 const Home = (props) => {
+  const dispatch = useDispatch();
+  const userName = useSelector(selectUserName);
+
+  useEffect(() => {
+    let recommended = [];
+    let newToDisney = [];
+    let originals = [];
+    let trending = [];
+
+    const unsub = onSnapshot(collection(db, 'movies'), (snapshot) => {
+      snapshot.docs.map((doc) => {
+        console.log('HELLOOOOOOO');
+        console.log('RECOMMENDED: ', recommended);
+        console.log('NEW: ', newToDisney);
+        console.log('ORIGINALS: ', originals);
+        console.log('TRENDING: ', trending);
+
+        switch (doc.data().type) {
+          case 'recommend':
+            recommended = [...recommended, { id: doc.id, ...doc.data() }];
+            break;
+          case 'new':
+            newToDisney = [...newToDisney, { id: doc.id, ...doc.data() }];
+            break;
+          case 'original':
+            originals = [...originals, { id: doc.id, ...doc.data() }];
+            break;
+          case 'trending':
+            trending = [...trending, { id: doc.id, ...doc.data() }];
+            break;
+        }
+      });
+
+      dispatch(
+        setMovies({
+          recommend: recommended,
+          new: newToDisney,
+          original: originals,
+          trending: trending,
+        }),
+      );
+    });
+
+    return () => unsub(); // Unsubscribe from the snapshot on component unmount
+  }, [userName]);
+
   return (
     <Container>
       <ImageSlider />
@@ -43,3 +97,33 @@ const Container = styled.main`
 `;
 
 export default Home;
+
+/*
+          case 'recommend':
+            recommended = [...recommended, { id: doc.id, ...doc.data() }];
+            break;
+          case 'new':
+            newToDisney = [...newToDisney, { id: doc.id, ...doc.data() }];
+            break;
+          case 'original':
+            originals = [...originals, { id: doc.id, ...doc.data() }];
+            break;
+          case 'trending':
+            trending = [...trending, { id: doc.id, ...doc.data() }];
+            break;
+          
+                  switch (doc.data().type) {
+          case 'recommend':
+            recommended.push({ id: doc.id, ...doc.data() });
+            break;
+          case 'new':
+            newToDisney.push({ id: doc.id, ...doc.data() });
+            break;
+          case 'original':
+            originals.push({ id: doc.id, ...doc.data() });
+            break;
+          case 'trending':
+            trending.push({ id: doc.id, ...doc.data() });
+            break;
+        }
+            */

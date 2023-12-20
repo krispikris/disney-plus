@@ -59,16 +59,19 @@ const Header = (props) => {
   return (
     <Nav>
       <Logo>
-        <img src="../images/00-icons/01-disney-logo.png" alt="" />
+        <a href="/home">
+          <img
+            onClick="/home"
+            src="../images/00-icons/01-disney-logo.png"
+            alt=""
+          />
+        </a>
       </Logo>
       {!userName ? (
         <Login onClick={handleLogin}>Login</Login>
       ) : (
         <>
           <NavMenu>
-            {/* <a href="/home">
-              <img src="../images/00-icons/02-nav-home-icon.svg" alt="HOME" />
-            </a> */}
             <a href="/home">
               <img src="../images/00-icons/02-nav-home-icon.svg" alt="" />
               <span>HOME</span>

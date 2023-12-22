@@ -29,11 +29,11 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  display: grid;
-  grid-gap: 24px;
-  gap: 24px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 32px;
+  // display: grid;
+  // grid-gap: 24px;
+  // gap: 24px;
+  // grid-template-columns: repeat(4, minmax(0, 1fr));
+  // margin-top: 32px;
 
   @media (max-width: 768px) {
     // if on mobile, the viewers will be top to bottom instead of side to side

@@ -184,8 +184,8 @@ const NavMenu = styled.div`
         width: auto;
         height: 2px;
 
-        border-radius: 0px 0px 4px 4px;
-        background-color: rgb(249, 249, 249);
+        // border-radius: 0px 0px 4px 4px;
+        // background-color: rgb(249, 249, 249);
 
         opacity: 0;
         visibility: hidden;

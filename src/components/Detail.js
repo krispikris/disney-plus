@@ -38,7 +38,7 @@ const Detail = (props) => {
         <Controls>
           <Player>
             <img
-              src="/images/00-icons/08-a-control-play-icon-black.png"
+              // src="/images/00-icons/08-a-control-play-icon-black.png"
               alt=""
             />
             <span>Play</span>
@@ -46,7 +46,7 @@ const Detail = (props) => {
 
           <Trailer>
             <img
-              src="/images/00-icons/08-b-control-play-icon-white.png"
+              // src="/images/00-icons/08-b-control-play-icon-white.png"
               alt=""
             />
             <span>Trailer</span>

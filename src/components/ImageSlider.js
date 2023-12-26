@@ -18,34 +18,34 @@ const ImageSlider = (props) => {
 
   // return the Carousel component with the defined settings and images
   return (
-    // <Carousel {...settings}>
-    //   <Wrap>
-    //     <a>
-    //       <img
-    //         src="/images/02-home/01-sliders/01-slider-wanda-vision.jpg"
-    //         alt=""
-    //       />
-    //     </a>
-    //   </Wrap>
+    <Carousel {...settings}>
+      <Wrap>
+        <a>
+          <img
+            src="/images/02-home/01-sliders/01-slider-wanda-vision.jpg"
+            alt=""
+          />
+        </a>
+      </Wrap>
 
-    //   <Wrap>
-    //     <a>
-    //       <img src="/images/02-home/01-sliders/02-slider-onward.jpg" alt="" />
-    //     </a>
-    //   </Wrap>
+      <Wrap>
+        <a>
+          <img src="/images/02-home/01-sliders/02-slider-onward.jpg" alt="" />
+        </a>
+      </Wrap>
 
-    //   <Wrap>
-    //     <a>
-    //       <img src="/images/02-home/01-sliders/03-slider-burrow.jpg" alt="" />
-    //     </a>
-    //   </Wrap>
+      <Wrap>
+        <a>
+          <img src="/images/02-home/01-sliders/03-slider-burrow.jpg" alt="" />
+        </a>
+      </Wrap>
 
-    //   <Wrap>
-    //     <a>
-    //       <img src="/images/02-home/01-sliders/04-slider-bts.jpg" alt="" />
-    //     </a>
-    //   </Wrap>
-    // </Carousel>
+      <Wrap>
+        <a>
+          <img src="/images/02-home/01-sliders/04-slider-bts.jpg" alt="" />
+        </a>
+      </Wrap>
+    </Carousel>
   );
 };
 

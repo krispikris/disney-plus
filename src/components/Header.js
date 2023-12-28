@@ -265,7 +265,7 @@ const SignOut = styled.div`
   justify-content: center;
   align-items: center;
 
-  // cursor: pointer;
+  cursor: pointer;
 
   ${UserImg} {
     width: 100%;

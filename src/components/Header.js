@@ -242,7 +242,7 @@ const Dropdown = styled.div`
   justify-content: center;
 
   font-size: 14px;
-  letter-spacing: 3px;
+  // letter-spacing: 3px;
 
   padding: 10px;
   border: 1px solid rgba(151, 151, 151, 0.34);

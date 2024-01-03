@@ -235,8 +235,8 @@ const UserImg = styled.img`
 `;
 
 const Dropdown = styled.div`
-  // position: absolute;
-  // width: 120px;
+  position: absolute;
+  width: 120px;
 
   display: flex;
   justify-content: center;

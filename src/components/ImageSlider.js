@@ -10,8 +10,8 @@ const ImageSlider = (props) => {
   let settings = {
     dots: true, // show dot indicators at the bottom of the slider
     infinite: true, // infinite looping of images
-    // speed: 500, // transition speed in milliseconds
-    // slidesToShow: 1, // how many slides to show at once
+    speed: 500, // transition speed in milliseconds
+    slidesToShow: 1, // how many slides to show at once
     slidesToScroll: 1, // how many slides to scroll at once
     autoplay: true, // enable automatic sliding
   };

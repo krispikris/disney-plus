@@ -30,7 +30,7 @@ const ImageSlider = (props) => {
 
       <Wrap>
         <a>
-          <img src="/images/02-home/01-sliders/02-slider-onward.jpg" alt="" />
+          {/* <img src="/images/02-home/01-sliders/02-slider-onward.jpg" alt="" />
         </a>
       </Wrap>
 
@@ -42,7 +42,7 @@ const ImageSlider = (props) => {
 
       <Wrap>
         <a>
-          <img src="/images/02-home/01-sliders/04-slider-bts.jpg" alt="" />
+          <img src="/images/02-home/01-sliders/04-slider-bts.jpg" alt="" /> */}
         </a>
       </Wrap>
     </Carousel>

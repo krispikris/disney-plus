@@ -34,7 +34,7 @@ const Detail = (props) => {
         <img src={detailData.titleImg} alt={detailData.title} />
       </ImageTitle>
 
-      <ContentMeta>
+      {/* <ContentMeta> */}
         <Controls>
           <Player>
             <img

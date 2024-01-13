@@ -120,13 +120,13 @@ const ContentMeta = styled.div`
   max-width: 874px;
 `;
 
-// const Controls = styled.div`
-//   display: flex;
-//   flex-flow: row nowrap;
-//   align-items: center;
-//   min-height: 56px;
-//   margin: 24px 0px;
-// `;
+const Controls = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  min-height: 56px;
+  margin: 24px 0px;
+`;
 
 const Player = styled.button`
   display: flex;

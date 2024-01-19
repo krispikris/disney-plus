@@ -41,7 +41,7 @@ const Detail = (props) => {
               src="/images/00-icons/08-a-control-play-icon-black.png"
               alt=""
             />
-            {/* <span>Play</span> */}
+            <span>Play</span>
           </Player>
 
           <Trailer>

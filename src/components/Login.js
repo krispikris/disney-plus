@@ -103,12 +103,12 @@ const Description = styled.p`
   // border: 1px solid pink;
 `;
 
-const CTALogoTwo = styled.img`
-  display: inline-block;
-  width: 100%;
-  max-width: 600px;
-  vertical-align: bottom;
-  margin-bottom: 24px;
-`;
+// const CTALogoTwo = styled.img`
+//   display: inline-block;
+//   width: 100%;
+//   max-width: 600px;
+//   vertical-align: bottom;
+//   margin-bottom: 24px;
+// `;
 
 export default Login;

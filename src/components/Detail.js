@@ -213,26 +213,26 @@ const AddList = styled.div`
   }
 `;
 
-// const GroupWatch = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 48px;
-//   height: 48px;
-//   cursor: pointer;
+const GroupWatch = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
 
-//   div {
-//     width: 48px;
-//     height: 48px;
-//     background: rgba(0, 0, 0, 0.6);
-//     border: 2px solid white;
-//     border-radius: 50%;
-//   }
+  div {
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 50%;
+  }
 
-//   img {
-//     width: 100%;
-//   }
-// `;
+  img {
+    width: 100%;
+  }
+`;
 
 const SubTitle = styled.div`
   min-height: 20px;
@@ -244,16 +244,16 @@ const SubTitle = styled.div`
   }
 `;
 
-// const Description = styled.div`
-//   padding: 16px 0px;
-//   font-size: 20px;
-//   color: rgb(249, 249, 249);
-//   line-height: 1.4;
+const Description = styled.div`
+  padding: 16px 0px;
+  font-size: 20px;
+  color: rgb(249, 249, 249);
+  line-height: 1.4;
 
-//   @media (max-width: 768px) {
-//     font-size: 12px;
-//   }
-// `;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+`;
 
 export default Detail;
 

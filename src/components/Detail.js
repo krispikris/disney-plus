@@ -213,26 +213,26 @@ const AddList = styled.div`
   }
 `;
 
-const GroupWatch = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
+// const GroupWatch = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 48px;
+//   height: 48px;
+//   cursor: pointer;
 
-  div {
-    width: 48px;
-    height: 48px;
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid white;
-    border-radius: 50%;
-  }
+//   div {
+//     width: 48px;
+//     height: 48px;
+//     background: rgba(0, 0, 0, 0.6);
+//     border: 2px solid white;
+//     border-radius: 50%;
+//   }
 
-  img {
-    width: 100%;
-  }
-`;
+//   img {
+//     width: 100%;
+//   }
+// `;
 
 const SubTitle = styled.div`
   min-height: 20px;

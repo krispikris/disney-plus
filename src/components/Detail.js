@@ -244,16 +244,16 @@ const SubTitle = styled.div`
   }
 `;
 
-const Description = styled.div`
-  padding: 16px 0px;
-  font-size: 20px;
-  color: rgb(249, 249, 249);
-  line-height: 1.4;
+// const Description = styled.div`
+//   padding: 16px 0px;
+//   font-size: 20px;
+//   color: rgb(249, 249, 249);
+//   line-height: 1.4;
 
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
+//   @media (max-width: 768px) {
+//     font-size: 12px;
+//   }
+// `;
 
 export default Detail;
 

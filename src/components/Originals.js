@@ -7,20 +7,20 @@ const Originals = (props) => {
   const movies = useSelector(selectOriginal);
 
   return (
-    // <Container>
-    //   <h4>Disney Originals</h4>
-    //   <Content>
-    //     {movies &&
-    //       movies.map((movie, key) => (
-    //         <Wrap key={key}>
-    //           {movie.id}
-    //           <Link to={`/detail/${movie.id}`}>
-    //             <img src={movie.cardImg} alt="" />
-    //           </Link>
-    //         </Wrap>
-    //       ))}
-    //   </Content>
-    // </Container>
+    <Container>
+      <h4>Disney Originals</h4>
+      <Content>
+        {movies &&
+          movies.map((movie, key) => (
+            <Wrap key={key}>
+              {movie.id}
+              <Link to={`/detail/${movie.id}`}>
+                <img src={movie.cardImg} alt="" />
+              </Link>
+            </Wrap>
+          ))}
+      </Content>
+    </Container>
   );
 };
 

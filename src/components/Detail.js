@@ -169,19 +169,19 @@ const Player = styled.button`
   }
 `;
 
-const Trailer = styled(Player)`
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgb(249, 249, 249);
-  color: rgb(249, 249, 249);
+// const Trailer = styled(Player)`
+//   background: rgba(0, 0, 0, 0.3);
+//   border: 1px solid rgb(249, 249, 249);
+//   color: rgb(249, 249, 249);
 
-  &:hover {
-    color: rgb(0, 0, 0);
+//   &:hover {
+//     color: rgb(0, 0, 0);
 
-    // img {
-    //   background-image: url('/images/00-icons/another-image.png');
-    // }
-  }
-`;
+//     // img {
+//     //   background-image: url('/images/00-icons/another-image.png');
+//     // }
+//   }
+// `;
 
 const AddList = styled.div`
   display: flex;

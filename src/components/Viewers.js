@@ -31,7 +31,7 @@ const Viewers = (props) => {
         </video>
       </Wrap>
 
-      {/* <Wrap>
+      <Wrap>
         <img
           src="/images/02-home/02-viewers/05-viewers-national-geographic.png"
           alt=""
@@ -42,7 +42,7 @@ const Viewers = (props) => {
             type="video/mp4"
           />
         </video>
-      </Wrap> */}
+      </Wrap>
     </Container>
   );
 };

@@ -7,20 +7,20 @@ const Trending = (props) => {
   const movies = useSelector(selectTrending);
 
   return (
-    // <Container>
-    //   <h4>Trending</h4>
-    //   <Content>
-    //     {movies &&
-    //       movies.map((movie, key) => (
-    //         <Wrap key={key}>
-    //           {movie.id}
-    //           <Link to={`/detail/${movie.id}`}>
-    //             <img src={movie.cardImg} alt="" />
-    //           </Link>
-    //         </Wrap>
-    //       ))}
-    //   </Content>
-    // </Container>
+    <Container>
+      <h4>Trending</h4>
+      <Content>
+        {movies &&
+          movies.map((movie, key) => (
+            <Wrap key={key}>
+              {movie.id}
+              <Link to={`/detail/${movie.id}`}>
+                <img src={movie.cardImg} alt="" />
+              </Link>
+            </Wrap>
+          ))}
+      </Content>
+    </Container>
   );
 };
 

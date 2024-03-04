@@ -9,7 +9,7 @@ const Trending = (props) => {
   return (
     <Container>
       <h4>Trending</h4>
-      {/* <Content>
+      <Content>
         {movies &&
           movies.map((movie, key) => (
             <Wrap key={key}>
@@ -19,7 +19,7 @@ const Trending = (props) => {
               </Link>
             </Wrap>
           ))}
-      </Content> */}
+      </Content>
     </Container>
   );
 };

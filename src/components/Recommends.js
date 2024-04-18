@@ -53,18 +53,18 @@ const Wrap = styled.div`
   cursor: pointer;
   overflow: hidden;
 
-  img {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    inset: 0px;
-    z-index: 1;
-    object-fit: cover;
+  // img {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  inset: 0px;
+  z-index: 1;
+  object-fit: cover;
 
-    opacity: 1;
-    transition: opacity 500ms ease-in-out 0s;
-  }
+  opacity: 1;
+  transition: opacity 500ms ease-in-out 0s;
+  // }
 
   &:hover {
     box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,

@@ -230,9 +230,9 @@ const Login = styled.a`
   }
 `;
 
-const UserImg = styled.img`
-  height: 100%;
-`;
+// const UserImg = styled.img`
+//   height: 100%;
+// `;
 
 const Dropdown = styled.div`
   position: absolute;

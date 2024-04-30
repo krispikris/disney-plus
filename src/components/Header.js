@@ -85,10 +85,10 @@ const Header = (props) => {
               <img src="../images/00-icons/04-nav-watchlist-icon.svg" alt="" />
               <span>WATCHLIST</span>
             </a>
-            <a href="/originals">
+            {/* <a href="/originals">
               <img src="../images/00-icons/05-nav-originals-icon.svg" alt="" />
               <span>ORIGINALS</span>
-            </a>
+            </a> */}
             <a href="/movies">
               <img src="../images/00-icons/06-nav-movies-icon.svg" alt="" />
               <span>MOVIES</span>
